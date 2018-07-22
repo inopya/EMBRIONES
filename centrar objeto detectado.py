@@ -8,7 +8,7 @@
 #######################################################################
 # ******************************************************************* #
 # *                                                                 * #
-# *                   Autor:  Eulogio López Cayuela                 * #
+# *                   Autor:  Eulogio LÃ³pez Cayuela                 * #
 # *                                                                 * #
 # *         Utilidad para orientar robot hacia un objeto            * #
 #*               detectado por la camarala camara                   * #
@@ -26,7 +26,7 @@ NOTAS:
 
 Deteccion/Seguimiento de un objeto circular de color determinado.
 El programa presupone que los servos estan conectados a Arduino o similar
-y el control de imagen se comunica mediante puerto serie con la parte motiz
+y el control de imagen se comunica mediante puerto serie con la parte motriz
 Si los servos estan conectados a las Raspberry,
 las funciones de puerto serie son innecesarias
 
@@ -295,7 +295,8 @@ if (puertoDetectado != None or puertoDetectado == None):
             imagen_tratada.drawText("HUE" ,20,40,(255,0,255),fontsize=28)
         else:
             imagen_tratada = captura.colorDistance(COLOR_OBJETIVO).dilate(DILATE).invert().stretch(Umbral_bajo, Umbral_alto)
-##            imagen_tratada = imagen_tratada.smooth(algorithm_name='gaussian', aperture=(13, 13), sigma=20, spatial_sigma=10, grayscale=False, aperature=None)
+            ## descomentar y modificar si se desea desenfocar la imagen
+            #imagen_tratada = imagen_tratada.smooth(algorithm_name='gaussian', aperture=(13, 13), sigma=20, spatial_sigma=10, grayscale=False, aperature=None)
             imagen_tratada.drawText("COLOR" ,20,40,(255,0,255),fontsize=28)
 
         imagen_tratada.morphClose()
