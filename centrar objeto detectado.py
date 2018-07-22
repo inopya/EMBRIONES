@@ -11,7 +11,7 @@
 # *                   Autor:  Eulogio López Cayuela                 * #
 # *                                                                 * #
 # *         Utilidad para orientar robot hacia un objeto            * #
-#*               detectado por la camarala camara                   * #
+#*                      detectado por la camara                     * #
 # *                                                                 * #
 # *                  Version 1.1   Fecha: 21/07/2018                * #
 # *                                                                 * #
