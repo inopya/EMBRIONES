@@ -98,8 +98,7 @@ FLAG_isCircle = False           #Si es False se utiliza la funcion interna isCir
 
 
 
-FLAG_buscar_circulos = False
-FLAG_buscar_objetivo = False
+FLAG_buscar_circulos = False    #si es True, busca circulos, si es false busca blobs de cualquier forma
 
 
 #----------------------------------------------------------------------------------------------------
@@ -173,22 +172,7 @@ while display.isNotDone():
         for indice in range (len(TECLADO)):
             if  TECLADO[indice] == 1:
                 print "tecla numero: ", indice
-    if display.pressed:
-        if display.pressed[97]==1: # izquierda letra a
-            comando = 'izquierda' 
-    if display.pressed:
-        if display.pressed[100]==1: # derecha letra d
-            comando = 'derecha'
-    if display.pressed:
-        if display.pressed[115]==1: # stop letra s
-            comando = 'stop'
-    if display.pressed:
-        if display.pressed[119]==1: #a vance letra w
-            comando = 'avance'  # OJO sin parada
-    if display.pressed:
-        if display.pressed[120]==1: # retroceso letra x
-            comando = 'retroceso' # OJO sin parada
-
+                
     if display.pressed:
         if display.pressed[118]==1: # muestra normal/tratada letra v
             FLAG_mostrar_tratada = not (FLAG_mostrar_tratada)                    
